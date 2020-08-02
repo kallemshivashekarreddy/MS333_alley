@@ -13,6 +13,7 @@ class VideoToFrames {
    * @param amount number of frames per second or total number of frames that you want to extract
    * @param type [fps, totalFrames] The method of extracting frames: Number of frames per second of video or the total number of frames acros the whole video duration. defaults to fps
    */
+  //Frames extraction using tesseract
   public static getFrames(videoUrl: string, amount: number, type: VideoToFramesMethod = VideoToFramesMethod.fps): Promise<ImageData[]> {
     return new Promise((resolve: (frames: ImageData[]) => void, reject: (error: string) => void) => {
       let frames: ImageData[] = [];
